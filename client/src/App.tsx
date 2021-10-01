@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import classes from './App.module.css';
+import NavBar from './components/layout/NavBar';
+import MainPage from './components/pages/MainPage';
 
 function App() {
   return (
-    <div className="App">
-      
+    <div className={classes.app}>
+      <NavBar/>
+      <MainPage/>
     </div>
   );
 }

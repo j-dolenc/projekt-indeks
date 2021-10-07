@@ -1,0 +1,6 @@
+.scroll{
+	overflow-y: 'scroll';
+	height:'90vh';
+	justify-content:space-around;
+    align-items: center;
+}

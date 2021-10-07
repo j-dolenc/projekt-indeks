@@ -10,6 +10,7 @@ import classes from './App.module.css';
 import NavBar from './components/layout/NavBar';
 import MainPage from './components/pages/MainPage';
 import ProjectPage from './components/pages/ProjectPage';
+import Search from './components/pages/Search';
 
 function App() {
   return (
@@ -22,10 +23,10 @@ function App() {
         <MainPage/>
       </Route>
       <Route path="/search" exact>
-        <ProjectPage/>
+        <Search/>
       </Route>
       <Route path="/project" exact>
-
+        <ProjectPage/>
       </Route>
     </div>
   );

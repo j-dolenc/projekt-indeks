@@ -1,5 +1,9 @@
 import classes from './ProjectPage.module.css';
 const ProjectPage = () => {
-	return <div></div>;
+	return <section className={classes.main}>
+		<div>
+			
+		</div>
+	</section>;
 }
 export default ProjectPage;

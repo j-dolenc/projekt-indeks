@@ -1,0 +1,14 @@
+.main {
+	background-color: rgb(253, 253, 253);
+	height:35rem;
+	width: 100%;
+	max-width: 60rem;
+	padding: 3rem;
+	margin: 2rem auto;
+	text-align: center;
+	border-left: 0.1rem solid #00a876;;
+	border-right: 0.1rem solid #00a876;;
+}
+.main ul{
+	list-style-position:inside;
+}

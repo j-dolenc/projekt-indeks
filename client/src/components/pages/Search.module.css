@@ -1,5 +1,6 @@
 .naslov{
 	font-size: large;
+	
 }
 .main {
 	background-color: rgb(253, 253, 253);
@@ -14,4 +15,14 @@
 }
 .main ul{
 	list-style-position:inside;
+}
+.bar input {
+	font: inherit;
+    background-color: rgb(253,253,253);
+    color: rgb(37,37,37);
+    border-radius: 4px;
+    border: 1px solid #a7b9b4;
+    width: 45%;
+    text-align: left;
+    padding: 0.25rem;
 }

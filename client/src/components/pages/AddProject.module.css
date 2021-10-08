@@ -74,3 +74,13 @@
     background-color: transparent;
     color: #639978;
   } 
+  .invalid button{
+    font: inherit;
+    color: #00a876;
+    background-color: #788a84;
+    border: 1.5px solid #788a84;
+    border-radius: 10px;
+    padding: 0.5rem 2.5rem;
+	transition: 0.2s ease-in-out;
+	transition-property: box-shadow, background-color, color;
+  }

@@ -12,3 +12,74 @@
 .main ul{
 	list-style-position:inside;
 }
+.project{
+    display: flex;
+    /* border:1px solid black; */
+    
+    height: 45rem;
+    margin:15px;
+}
+.box{
+    border:1px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke;  
+    margin:10px;
+    width: 90%;
+    max-width:60rem;
+}
+.options{
+    border:1px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke;  
+    margin:10px;
+    width: 30%;
+}
+
+
+/* .box{
+    height: 90%;
+    width: 90%;
+    margin: 15px;
+    padding:2rem;
+    max-width: 50rem;
+    
+    
+    left:15px;
+    
+    bottom:15px;
+    padding: 3rem;
+    margin: 2rem auto;
+    border: 2px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke;  
+    
+}
+ .options{
+    height: 90%;
+    width: 90%;
+    margin: 15px;
+    padding:2rem;
+    max-width: 50rem;
+    position: fixed;
+    
+    left:15px;
+    
+    bottom:15px;
+    top:70px;
+    padding: 3rem;
+    margin: 2rem auto;
+   border: 2px solid black;
+    border-radius: 12px;
+    background-color: whitesmoke; 
+    
+} 
+
+.project{
+    display:flex;
+    flex-direction: initial;
+    top: 5rem; right: 0; bottom: 0; left: 0;
+    position: fixed;
+    border:2px solid red;
+    align-content: space-around;
+}
+ */

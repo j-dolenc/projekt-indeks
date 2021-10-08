@@ -2,13 +2,19 @@ import classes from "./AddProject.module.css";
 import { Field, Formik } from "formik";
 import DropDown from "../layout/DropDown";
 import { json } from "express";
-import { useState } from "react";
+import { useRef, useState } from "react";
 const AddProject = () => {
 	
-	const [imeProjekta,setImeProjekta] = useState(false);
-	const [pot, setPot] = useState(false);
+	//TODO: validation
+	//TODO: POST
+	//TODO: Redirect
+	const imeProjektaRef = useRef<string>("");
+	const potRef = useRef<string>("");
+	const [imeProjektaValid,setImeProjektaValid] = useState(false);
+	const [potValid, setPotValid] = useState(false);
+
 	let validated = false;
-	if(imeProjekta && pot){
+	if(imeProjektaValid && potValid){
 		validated = !validated;
 	}
 
@@ -20,6 +26,8 @@ const AddProject = () => {
 	let data:{value:string,label:string}[]=[];
 	const onSubmitHandler = async (event: React.FormEvent) => {
 		event.preventDefault();
+
+		
 	}
 
 	const getOptions =async() => {
@@ -59,7 +67,24 @@ const AddProject = () => {
 	}
 	getOptions();
 
-
+	const onChangeImeHandler =() =>{
+		if(imeProjektaRef.current !== ""){
+			setImeProjektaValid(true);
+		}
+		else{
+			setImeProjektaValid(false);
+		}
+	}
+	const onChangePotHandler =() =>{
+		if(potRef.current !== ""){
+			setPotValid(true);
+		}
+		else{
+			setPotValid(false);
+		}
+	}
+	let classGumb= validated? "classes.actions" :"classes.actions classes.invalid";
+	
   return (
     <section className={classes.main}>
       <div>
@@ -72,11 +97,11 @@ const AddProject = () => {
         <form onSubmit={onSubmitHandler}>
           <div className={classes.control}>
             <label htmlFor="projectName">Ime Projekta</label>
-            <input placeholder="eg. Karavanke" type="text" id="projectName"></input>
+            <input placeholder="eg. Karavanke" type="text" id="projectName" onChange={onChangeImeHandler}></input>
           </div>
           <div className={classes.control}>
             <label htmlFor="path">Absolutna Pot Do Projekta</label>
-            <input placeholder=" eg. C:\mojiDokumenti/mojProjekt" type="text" id="path"></input>
+            <input placeholder=" eg. C:\mojiDokumenti/mojProjekt" type="text" id="path" onChange={onChangePotHandler}></input>
           </div>
           <div className={classes.control}>
             <label htmlFor="description">Opis Projekta</label>
@@ -88,8 +113,8 @@ const AddProject = () => {
           </div>
           {/* moznost, kdo lahko vidi projekt, naredi
             z izbiro večih moćnosti.... svoja komponenta... */}
-			<div className={classes.actions}>
-				<button type="submit">Ustvari Projekt</button>
+			<div className={classGumb}>
+				<button type="submit" disabled={!validated}>Ustvari Projekt</button>
 			</div>
         </form>
       </div>

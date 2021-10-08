@@ -10,7 +10,7 @@ const Search: React.FC <{data:{
 	lastnik:string,
 	spremenjen:string,
   }[]}> = (props) => {
-
+    //TODO: onclick redirect
   
   const [search, setSearch] = useState("");
   const searchRef = useRef<HTMLInputElement>(null);
@@ -30,11 +30,12 @@ const Search: React.FC <{data:{
       <div className={classes.naslov}>
         <h1>Poišči Projekt</h1>
       </div>
-      <div>
+      <div className={classes.bar}>
         <input
           type="search"
           placeholder="Poišči Projekt"
           onChange={handleChange}
+
         />
       </div>
       <Scroll>

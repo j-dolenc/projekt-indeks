@@ -52,7 +52,10 @@ function App() {
       <Route path="/search" exact>
         <Search data={dataNivo0}/>
       </Route>
-      <Route path="/project" exact>
+      <Route path="/project" exact> {/*poglej kako bos naredu tale redirect za projectpage*/ }
+        <ProjectPage/>
+      </Route>
+      <Route path="/project/:id" exact>
         <ProjectPage/>
       </Route>
       <Route path="/add" exact>

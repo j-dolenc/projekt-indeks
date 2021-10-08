@@ -22,19 +22,21 @@
 	margin-bottom: 1rem;
 	width: 10rem;
 	height:3rem;
-	background-color:  #00a876;
-	color:rgb(34, 34, 34);
+	background-color:  rgb(253, 253, 253);
+	color:#00a876;
 	border: solid 1px rgb(34, 34, 34); 
 	box-shadow:  1px 3px 0 rgba(34,34,34,0.2);
 	border-radius: 12px;
 	display:inline-block;
-	
+	transition: 0.2s ease-in-out;
+	transition-property: box-shadow, background-color, color;
 	/* display: flex;
 	justify-content: center;
 	align-items: center; */
 }
 .btn:hover{
-	color:rgb(212, 211, 211);
+	color:rgb(253, 253, 253);
+	background-color: #00a876;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 	/* background-color: rgb(31, 88, 56); */
 	border: solid 1px rgb(0, 0, 0); 

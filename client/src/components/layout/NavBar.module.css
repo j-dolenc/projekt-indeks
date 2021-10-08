@@ -37,6 +37,7 @@
     .nav a:active,
     .nav a.active {
         color: #00a876;
+        text-decoration: underline ;
     }
     
     .nav button {

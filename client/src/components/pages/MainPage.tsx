@@ -1,4 +1,5 @@
 import classes from './MainPage.module.css';
+import {NavLink} from "react-router-dom";
 const MainPage = () => {
 
 	//TODO: usposobi spodnje tri gumbke...
@@ -17,9 +18,15 @@ const MainPage = () => {
 	<div>
 	  <h2>Pričnite z delom:</h2>
 	  <div className={classes.btngrp}>
-		<button className={classes.btn}>Odpri Projekt</button>
-		<button className={classes.btn}>Ustvari Projekt</button>
-		<button className={classes.btn}>Log Out</button>
+		  <NavLink activeClassName={classes.active} to="/search">
+			  <button className={classes.btn}>Odpri Projekt</button>
+		  </NavLink>
+		  <NavLink activeClassName={classes.active} to="/add">
+		  	<button className={classes.btn}>Ustvari Projekt</button>
+		  </NavLink>
+		  <NavLink activeClassName={classes.active} to="/login">
+			  <button className={classes.btn}>Log Out</button>
+		  </NavLink>
 	  </div>
 	</div>
   </section>

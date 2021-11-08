@@ -1,3 +1,4 @@
+
 import classes from "./MainPage.module.css";
 import {
   BrowserRouter as Router,
@@ -6,6 +7,8 @@ import {
   Link,
   NavLink,
 } from "react-router-dom";
+
+
 const MainPage = () => {
   //TODO: usposobi spodnje tri gumbke...
 

@@ -32,6 +32,8 @@ const ProjectTree = () => {
   return (
     <div>
       <h2>{"{CURRENT PROJECT}"}</h2>
+      <p><b>Pot projekta:</b><a href="file://localhost/C:\Users\StudentGR1\Documents\Projekt_tloris\Načrtovanje_baze\Karavanke-test">Projektna pott</a></p>
+      <p><b>Opis:</b> Tukaj bo napisan opis projekta..</p>
       <div style={{ height: 400 }}>
         <SortableTree treeData={treeData} onChange={onChangeHandler} />
       </div>

@@ -57,9 +57,21 @@
 	transition-property: box-shadow, background-color, color;
   }
   
-  .actions button:hover {
+  .actions button:hover,
+  .btnabel {
     background-color: #00a876;
 	color:rgb(253,253,253);
+  }
+  .actions button:disabled {
+    cursor: not-allowed;
+    font: inherit;
+    color: #028a61;
+    background-color: rgb(177, 177, 177);
+    border: 1.5px solid #00a876;
+    border-radius: 10px;
+    padding: 0.5rem 2.5rem;
+	transition: 0.2s ease-in-out;
+	transition-property: box-shadow, background-color, color;
   }
   
   .actions .toggle {
@@ -74,13 +86,4 @@
     background-color: transparent;
     color: #639978;
   } 
-  .invalid button{
-    font: inherit;
-    color: #00a876;
-    background-color: #788a84;
-    border: 1.5px solid #788a84;
-    border-radius: 10px;
-    padding: 0.5rem 2.5rem;
-	transition: 0.2s ease-in-out;
-	transition-property: box-shadow, background-color, color;
-  }
+ 

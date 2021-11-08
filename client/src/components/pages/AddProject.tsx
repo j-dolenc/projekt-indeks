@@ -14,10 +14,10 @@ const AddProject = () => {
 	const [potValid, setPotValid] = useState(false);
 
 	let validated = false;
-	if(imeProjektaValid && potValid){
-		validated = !validated;
-	}
+	if(imeProjektaValid && potValid) validated = true;
+	else validated = false;
 
+	console.log(validated);
 
 
 
@@ -68,22 +68,32 @@ const AddProject = () => {
 	getOptions();
 
 	const onChangeImeHandler =() =>{
-		if(imeProjektaRef.current !== ""){
+		if(imeProjektaRef.current.length !== 0){
 			setImeProjektaValid(true);
 		}
 		else{
 			setImeProjektaValid(false);
 		}
+		if(imeProjektaValid && potValid){
+			validated = true;
+		}
+	
+	
 	}
 	const onChangePotHandler =() =>{
-		if(potRef.current !== ""){
+		if(potRef.current.length !== 0){
 			setPotValid(true);
 		}
 		else{
 			setPotValid(false);
 		}
+		if(imeProjektaValid && potValid){
+			validated = true;
+		}
+	
+	
 	}
-	let classGumb= validated? "classes.actions" :"classes.actions classes.invalid";
+	//let classGumb= validated? "classes.actions" :"classes.invalid";
 	
   return (
     <section className={classes.main}>
@@ -91,9 +101,6 @@ const AddProject = () => {
         <h1>Ustvari Nov Projekt:</h1>
       </div>
       <div>
-        {/* <Formik>
-			  initialValues={{imeProjekta}}
-		  </Formik> */}
         <form onSubmit={onSubmitHandler}>
           <div className={classes.control}>
             <label htmlFor="projectName">Ime Projekta</label>
@@ -113,8 +120,8 @@ const AddProject = () => {
           </div>
           {/* moznost, kdo lahko vidi projekt, naredi
             z izbiro večih moćnosti.... svoja komponenta... */}
-			<div className={classGumb}>
-				<button type="submit" disabled={!validated}>Ustvari Projekt</button>
+			<div className={classes.actions}>
+				<button type="submit" disabled={false}>Ustvari Projekt</button>
 			</div>
         </form>
       </div>

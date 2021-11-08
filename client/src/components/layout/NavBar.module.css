@@ -36,7 +36,7 @@
     .nav a:hover,
     .nav a:active,
     .nav a.active {
-        color: #00a876;
+        color: #bdbdbd;
         text-decoration: underline ;
     }
     
